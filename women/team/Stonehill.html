@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stonehill</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../index.html">College Hockey Rankings</a>
+  <nav>
+    <a href="../index.html">Men's</a>
+    <a href="../women/index.html">Women's</a>
+    <a href="../methodology.html">Methodology</a>
+  </nav>
+</header>
+<main class="container">
+
+<h1><img class="logo" src="../assets/logos/stonehill.png" style="width:32px;height:32px;vertical-align:middle;"> Stonehill</h1>
+<div class="grid-2">
+  <div class="card"><h2>Upcoming schedule</h2><p>No upcoming games found.</p></div>
+  <div class="card"><h2>Season summary</h2><div class="card"><p class='subtitle'>Win% 0.329 </p><h2>Best wins (Massey)</h2><ul class='plain'><li>Lindenwood</li><li>St. Lawrence</li><li>LIU</li></ul><h2>Toughest losses (Massey)</h2><ul class='plain'><li>Alaska Anchorage</li><li>Army</li><li>Lake Superior</li></ul><h2>Projected finish (Massey)</h2><canvas id="dist-Massey" height="140"></canvas><script>renderDist('dist-Massey', [60], [1.0]);</script></div></div>
+</div>
+<div class="card"><p class='subtitle'>Win% 0.329 </p><h2>Best wins (KRACH)</h2><ul class='plain'><li>Sacred Heart</li><li>Lindenwood</li><li>LIU</li></ul><h2>Toughest losses (KRACH)</h2><ul class='plain'><li>Alaska Anchorage</li><li>Lake Superior</li><li>Lake Superior</li></ul><h2>Projected finish (KRACH)</h2><canvas id="dist-KRACH" height="140"></canvas><script>renderDist('dist-KRACH', [62], [1.0]);</script></div><div class="card"><p class='subtitle'>Win% 0.329 </p><h2>Best wins (ELO)</h2><ul class='plain'><li>Lindenwood</li><li>LIU</li><li>LIU</li></ul><h2>Toughest losses (ELO)</h2><ul class='plain'><li>Merrimack</li><li>Alaska Anchorage</li><li>Lindenwood</li></ul><h2>Projected finish (ELO)</h2><canvas id="dist-ELO" height="140"></canvas><script>renderDist('dist-ELO', [56], [1.0]);</script></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script>
+function renderDist(canvasId, labels, probs) {
+  const ctx = document.getElementById(canvasId);
+  if (!ctx || !window.Chart) return;
+  new Chart(ctx, {
+    type: 'bar',
+    data: { labels: labels, datasets: [{ label: 'Probability', data: probs, backgroundColor: '#7a3ff2' }] },
+    options: { plugins: { legend: { display: false } }, scales: { x: { title: { display: true, text: 'Final rank' } } } }
+  });
+}
+</script>
+
+</main>
+<footer class="site-footer">
+  <p>Built from 5 featured models. Not affiliated with USCHO, the NCAA, or any conference.</p>
+</footer>
+</body>
+</html>
