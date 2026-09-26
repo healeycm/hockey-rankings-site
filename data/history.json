@@ -27,5 +27,21 @@
     "ELO": "Wisconsin",
     "RPI": "Ohio State",
     "NPI": "Ohio State"
+  },
+  "men:2026-09-26": {
+    "ELO": "Michigan",
+    "Massey": "Michigan",
+    "KRACH": "Michigan",
+    "NPI": "Michigan",
+    "HockeyBT": "Michigan",
+    "RPI": "Michigan"
+  },
+  "women:2026-09-26": {
+    "Massey": "Wisconsin",
+    "HockeyBT": "Ohio State",
+    "KRACH": "Assumption",
+    "ELO": "Wisconsin",
+    "RPI": "Minnesota Duluth",
+    "NPI": "Minnesota Duluth"
   }
 }
