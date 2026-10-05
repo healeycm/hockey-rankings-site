@@ -43,5 +43,21 @@
     "ELO": "Wisconsin",
     "RPI": "Minnesota Duluth",
     "NPI": "Minnesota Duluth"
+  },
+  "men:2026-10-05": {
+    "ELO": "Denver",
+    "Massey": "Denver",
+    "KRACH": "Bemidji State",
+    "NPI": "Denver",
+    "HockeyBT": "Boston University",
+    "RPI": "Quinnipiac"
+  },
+  "women:2026-10-05": {
+    "Massey": "Ohio State",
+    "HockeyBT": "Ohio State",
+    "KRACH": "Minnesota",
+    "ELO": "Wisconsin",
+    "RPI": "St. Cloud State",
+    "NPI": "Vermont"
   }
 }

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-division="men">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maryville</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body data-division="men">
+<header class="site-header">
+  <a class="brand" href="../index.html">College Hockey Rankings</a>
+  <nav>
+    <a href="../index.html">Men's</a>
+    <a href="../women/index.html">Women's</a>
+    <a href="../methodology.html">Methodology</a>
+  </nav>
+</header>
+<main class="container">
+
+<h1><img class="logo" src="../assets/logos/default.png" style="width:32px;height:32px;vertical-align:middle;"> Maryville</h1>
+<div class="grid-2">
+  <div class="card"><h2>Upcoming schedule</h2><ul class="plain"><li>2026-10-31 &middot; vs Trine &mdash; win prob 57%</li><li>2026-11-05 &middot; @ Lake Superior &mdash; win prob 43%</li><li>2026-11-06 &middot; @ Lake Superior &mdash; win prob 43%</li><li>2026-11-27 &middot; @ Bowling Green &mdash; win prob 41%</li><li>2026-11-28 &middot; @ Bowling Green &mdash; win prob 41%</li><li>2026-12-11 &middot; @ Lindenwood &mdash; win prob 47%</li><li>2027-01-03 &middot; @ Holy Cross &mdash; win prob 44%</li><li>2027-01-08 &middot; @ Lindenwood &mdash; win prob 47%</li><li>2027-01-09 &middot; @ Lindenwood &mdash; win prob 47%</li><li>2027-02-21 &middot; @ Lindenwood &mdash; win prob 47%</li></ul></div>
+  <div class="card"><h2>Season overview</h2><ul class='plain'><li>Games played: 1</li><li>Win%: 1.000</li><li>Strength of schedule: 0.0</li></ul></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script>
+function renderDist(canvasId, labels, probs) {
+  const ctx = document.getElementById(canvasId);
+  if (!ctx || !window.Chart) return;
+  const accent = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#1d4ed8';
+  new Chart(ctx, {
+    type: 'bar',
+    data: { labels: labels, datasets: [{ label: 'Probability', data: probs, backgroundColor: accent }] },
+    options: { plugins: { legend: { display: false } }, scales: { x: { title: { display: true, text: 'Final rank' } } } }
+  });
+}
+</script>
+
+</main>
+<footer class="site-footer">
+  <p>Built from 6 featured models. Not affiliated with USCHO, the NCAA, or any conference.</p>
+</footer>
+</body>
+</html>
