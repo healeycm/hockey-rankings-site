@@ -28,36 +28,20 @@
     "RPI": "Ohio State",
     "NPI": "Ohio State"
   },
-  "men:2026-09-26": {
-    "ELO": "Michigan",
-    "Massey": "Michigan",
-    "KRACH": "Michigan",
-    "NPI": "Michigan",
-    "HockeyBT": "Michigan",
-    "RPI": "Michigan"
-  },
-  "women:2026-09-26": {
-    "Massey": "Wisconsin",
-    "HockeyBT": "Ohio State",
-    "KRACH": "Assumption",
-    "ELO": "Wisconsin",
-    "RPI": "Minnesota Duluth",
-    "NPI": "Minnesota Duluth"
-  },
-  "men:2026-10-05": {
+  "men:2026-10-10": {
     "ELO": "Denver",
-    "Massey": "Denver",
-    "KRACH": "Bemidji State",
-    "NPI": "Denver",
-    "HockeyBT": "Boston University",
-    "RPI": "Quinnipiac"
+    "Massey": "Quinnipiac",
+    "KRACH": "Air Force",
+    "NPI": "Quinnipiac",
+    "HockeyBT": "Quinnipiac",
+    "RPI": "North Dakota"
   },
-  "women:2026-10-05": {
+  "women:2026-10-10": {
     "Massey": "Ohio State",
     "HockeyBT": "Ohio State",
-    "KRACH": "Minnesota",
-    "ELO": "Wisconsin",
-    "RPI": "St. Cloud State",
-    "NPI": "Vermont"
+    "KRACH": "Colgate",
+    "ELO": "Ohio State",
+    "RPI": "Ohio State",
+    "NPI": "Ohio State"
   }
 }
