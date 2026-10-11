@@ -35,6 +35,11 @@ function renderDist(canvasId, labels, probs) {
     options: { plugins: { legend: { display: false } }, scales: { x: { title: { display: true, text: 'Final rank' } } } }
   });
 }
+// Charts are queued by each card (above) and drawn here, once Chart.js has
+// loaded -- calling renderDist inline from the card ran before it existed.
+window.addEventListener('load', function () {
+  (window._dist || []).forEach(function (a) { renderDist(a[0], a[1], a[2]); });
+});
 </script>
 
 </main>
