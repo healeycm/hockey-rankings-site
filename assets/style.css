@@ -84,7 +84,18 @@ tbody tr:hover td { background: var(--hover); }
 .tag { font-size: .8rem; color: var(--muted); }
 
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
-@media (max-width: 700px) { .grid-2 { grid-template-columns: 1fr; } .site-header nav a { margin-left: 12px; } }
+@media (max-width: 700px) { .grid-2 { grid-template-columns: 1fr; } }
+
+/* Phones: keep the rating column on screen by dropping Conference and the
+   table's minimum width; the nav sits flush left under the brand. */
+@media (max-width: 600px) {
+  .site-header nav a { margin: 0 14px 0 0; }
+  table { min-width: 0; }
+  th, td { padding-right: 6px; font-size: .88rem; }
+  .num { padding-right: 8px; }
+  table th:nth-child(3), table td:nth-child(3) { display: none; }
+  .team-link { gap: 6px; }
+}
 
 ul.plain { list-style: none; padding: 0; margin: 0; }
 ul.plain li { padding: 4px 0; font-size: .92rem; }
