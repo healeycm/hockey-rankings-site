@@ -59,5 +59,21 @@
     "ELO": "Ohio State",
     "RPI": "Ohio State",
     "NPI": "Ohio State"
+  },
+  "men:2026-10-15": {
+    "ELO": "Michigan",
+    "Massey": "Denver",
+    "KRACH": "Northeastern",
+    "NPI": "Michigan",
+    "HockeyBT": "Michigan",
+    "RPI": "Northeastern"
+  },
+  "women:2026-10-15": {
+    "Massey": "Ohio State",
+    "HockeyBT": "Ohio State",
+    "KRACH": "Colgate",
+    "ELO": "Ohio State",
+    "RPI": "Ohio State",
+    "NPI": "Ohio State"
   }
 }
