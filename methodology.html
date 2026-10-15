@@ -37,7 +37,8 @@ fixed formulas (NPI, RPI). Some use goals scored, and others only wins and losse
 <p>Every team starts from a baseline rating (carried over from a preseason prior). After each game the winner takes points from the loser: more for an upset, fewer for an expected win. The exchange is scaled by margin of victory and adjusted for home ice.</p>
 <h3>Main attributes</h3>
 <ul class="plain"><li>Updates game by game</li><li>Uses margin of victory</li><li>Home-ice adjustment</li><li>Order of games matters</li></ul>
-<div class="links-row"><a href="https://en.wikipedia.org/wiki/Elo_rating_system" rel="noopener" target="_blank">Wikipedia: Elo rating system</a></div>
+<h3>References</h3>
+<ul class="plain refs"><li>Elo, A. E. (1978). The Rating of Chessplayers, Past and Present. Arco.</li><li><a href="https://doi.org/10.1016/j.ijforecast.2009.10.002" rel="noopener" target="_blank">Hvattum, L. M. &amp; Arntzen, H. (2010). Using ELO ratings for match result prediction in association football. International Journal of Forecasting, 26(3), 460-470.</a></li><li><a href="https://en.wikipedia.org/wiki/Elo_rating_system" rel="noopener" target="_blank">Wikipedia: Elo rating system</a></li></ul>
 </div>
 <div class="card">
 <div class="card-head"><h2>Massey</h2><div class="tag-row"><span class="tag men">Men's</span><span class="tag women">Women's</span></div></div>
@@ -46,7 +47,8 @@ fixed formulas (NPI, RPI). Some use goals scored, and others only wins and losse
 <p>Solves one linear equation per game (winner's rating minus loser's rating &asymp; goal margin) for the single set of ratings with the smallest total error. Adds a fitted home-ice term, a rest/fatigue adjustment, and ridge regularization so teams with thin schedules don't get extreme ratings.</p>
 <h3>Main attributes</h3>
 <ul class="plain"><li>Fits the whole season at once</li><li>Uses goal differential</li><li>Home-ice and rest adjustments</li><li>Rating is in goals</li></ul>
-<div class="links-row"><a href="https://masseyratings.com/" rel="noopener" target="_blank">Kenneth Massey&#x27;s rating site</a><a href="https://press.princeton.edu/books/paperback/9780691162231/whos-1" rel="noopener" target="_blank">Langville &amp; Meyer, Who&#x27;s #1?</a></div>
+<h3>References</h3>
+<ul class="plain refs"><li><a href="https://www.masseyratings.com/theory/massey97.pdf" rel="noopener" target="_blank">Massey, K. (1997). Statistical models applied to the rating of sports teams. Honors thesis, Bluefield College.</a></li><li><a href="https://press.princeton.edu/books/paperback/9780691162231/whos-1" rel="noopener" target="_blank">Langville, A. N. &amp; Meyer, C. D. (2012). Who&#x27;s #1? The Science of Rating and Ranking. Princeton University Press.</a></li></ul>
 </div>
 <div class="card">
 <div class="card-head"><h2>KRACH</h2><div class="tag-row"><span class="tag men">Men's</span><span class="tag women">Women's</span></div></div>
@@ -55,16 +57,18 @@ fixed formulas (NPI, RPI). Some use goals scored, and others only wins and losse
 <p>Solves for a rating per team so that each team's expected number of wins against its actual opponents, rating_A / (rating_A + rating_B) summed over its games, equals its actual number of wins.</p>
 <h3>Main attributes</h3>
 <ul class="plain"><li>Fits the whole season at once</li><li>Wins and losses only</li><li>No home-ice or margin terms</li><li>Rating is a win-odds scale</li></ul>
-<div class="links-row"><a href="https://www.uscho.com/rankings/mens-di-krach/" rel="noopener" target="_blank">USCHO: Men&#x27;s DI KRACH</a><a href="https://en.wikipedia.org/wiki/Bradley%E2%80%93Terry_model" rel="noopener" target="_blank">Wikipedia: Bradley-Terry model</a></div>
+<h3>References</h3>
+<ul class="plain refs"><li><a href="https://doi.org/10.2307/2334029" rel="noopener" target="_blank">Bradley, R. A. &amp; Terry, M. E. (1952). Rank analysis of incomplete block designs: I. The method of paired comparisons. Biometrika, 39(3/4), 324-345.</a></li><li><a href="https://doi.org/10.1214/aos/1079120141" rel="noopener" target="_blank">Hunter, D. R. (2004). MM algorithms for generalized Bradley-Terry models. Annals of Statistics, 32(1), 384-406.</a></li><li><a href="https://www.tier1hockeyfederation.com/krach-explained/" rel="noopener" target="_blank">KRACH explained (overview of Ken Butler&#x27;s rating)</a></li></ul>
 </div>
 <div class="card">
 <div class="card-head"><h2>NPI</h2><div class="tag-row"><span class="tag men">Men's</span><span class="tag women">Women's</span></div></div>
-<p>A reimplementation of the NCAA's Nutting Power Index, the committee's selection formula.</p>
+<p>A reimplementation of the NCAA Power Index (NPI), the formula the NCAA selection committee uses.</p>
 <h3>How it works</h3>
 <p>Combines a team's winning percentage (road wins weighted more than home wins) with strength of schedule, measured by opponents' winning percentage, and a bonus for wins over strong opponents, into a single index.</p>
 <h3>Main attributes</h3>
 <ul class="plain"><li>Formula, not a fitted model</li><li>Wins and losses only</li><li>Strength of schedule</li><li>Quality-win bonus</li></ul>
-<div class="links-row"><a href="https://www.ncaa.com/news/icehockey-men/article/ncaa-di-mens-hockey-championship-selection-process" rel="noopener" target="_blank">NCAA: DI men&#x27;s hockey selection process</a><a href="https://www.uscho.com/rankings/mens-di-npi/" rel="noopener" target="_blank">USCHO: Men&#x27;s DI NPI</a></div>
+<h3>References</h3>
+<ul class="plain refs"><li><a href="https://www.hockeyeastonline.com/articles/2025/09/d1-mens-ice-hockey-institutes-npi-for-championship-selections.php" rel="noopener" target="_blank">Hockey East (2025). DI Men&#x27;s Ice Hockey Institutes NPI for Championship Selections.</a></li><li><a href="https://www.uscho.com/2025/09/29/the-npi-is-going-to-replace-the-pairwise-but-what-does-that-mean-for-college-hockey" rel="noopener" target="_blank">USCHO (2025). The NPI is going to replace the PairWise. What does that mean for college hockey?</a></li><li><a href="https://www.ncaa.com/news/icehockey-women/article/2023-02-23/nc-womens-hockey-championship-selection-process-explained" rel="noopener" target="_blank">NCAA (2023). Women&#x27;s hockey championship selection process explained.</a></li></ul>
 </div>
 <div class="card">
 <div class="card-head"><h2>HockeyBT</h2><div class="tag-row"><span class="tag men">Men's</span><span class="tag women">Women's</span></div></div>
@@ -73,7 +77,8 @@ fixed formulas (NPI, RPI). Some use goals scored, and others only wins and losse
 <p>Uses the same core as KRACH and adds two fitted terms: a home-ice advantage, and a tie parameter so overtime and shootout games count as closer to a draw than a clean win. A prior keeps thinly-scheduled teams from drifting to extreme ratings.</p>
 <h3>Main attributes</h3>
 <ul class="plain"><li>Fits the whole season at once</li><li>Win / tie / loss outcomes</li><li>Fitted home-ice term</li><li>Regularized</li></ul>
-<div class="links-row"><a href="https://en.wikipedia.org/wiki/Bradley%E2%80%93Terry_model" rel="noopener" target="_blank">Wikipedia: Bradley-Terry model</a></div>
+<h3>References</h3>
+<ul class="plain refs"><li><a href="https://doi.org/10.1080/01621459.1970.10481082" rel="noopener" target="_blank">Davidson, R. R. (1970). On extending the Bradley-Terry model to accommodate ties in paired comparison experiments. Journal of the American Statistical Association, 65(329), 317-328.</a></li><li><a href="https://doi.org/10.2307/2529467" rel="noopener" target="_blank">Davidson, R. R. &amp; Beaver, R. J. (1977). On extending the Bradley-Terry model to incorporate within-pair order effects. Biometrics, 33(4), 693-702.</a></li><li><a href="https://en.wikipedia.org/wiki/Bradley%E2%80%93Terry_model" rel="noopener" target="_blank">Wikipedia: Bradley-Terry model</a></li></ul>
 </div>
 <div class="card">
 <div class="card-head"><h2>RPI</h2><div class="tag-row"><span class="tag men">Men's</span><span class="tag women">Women's</span></div></div>
@@ -82,7 +87,8 @@ fixed formulas (NPI, RPI). Some use goals scored, and others only wins and losse
 <p>RPI = 0.25 &times; own winning percentage + 0.50 &times; opponents' average winning percentage + 0.25 &times; opponents' opponents' average winning percentage, with road wins weighted more than home wins.</p>
 <h3>Main attributes</h3>
 <ul class="plain"><li>Formula, not a fitted model</li><li>Wins and losses only</li><li>Strength of schedule</li><li>Rating is a 0 to 1 index</li></ul>
-<div class="links-row"><a href="https://en.wikipedia.org/wiki/Rating_percentage_index" rel="noopener" target="_blank">Wikipedia: Rating percentage index</a></div>
+<h3>References</h3>
+<ul class="plain refs"><li><a href="https://en.wikipedia.org/wiki/Rating_percentage_index" rel="noopener" target="_blank">Wikipedia: Rating percentage index</a></li></ul>
 </div>
 
 </main>
