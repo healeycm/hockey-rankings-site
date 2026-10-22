@@ -101,6 +101,7 @@ tbody tr:hover td { background: var(--hover); }
    scrolls sideways on narrow screens (inside .table-wrap). */
 table.conf { min-width: 0; }
 table.conf th, table.conf td { white-space: nowrap; }
+table.conf td.desc { white-space: normal; min-width: 14em; }
 table.matrix th, table.matrix td { white-space: nowrap; font-size: .85rem; padding-right: 12px; }
 table.matrix tbody th { text-align: left; font-weight: 600; border-bottom: 1px solid var(--border); }
 

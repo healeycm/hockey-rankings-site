@@ -35,7 +35,7 @@ fixed formulas (NPI, RPI). Some use goals scored, and others only wins and losse
 <div class="card-head"><h2>ELO</h2><div class="tag-row"><span class="tag men">Men's</span><span class="tag women">Women's</span></div></div>
 <p>A sequential rating that updates after every game, like chess ratings.</p>
 <h3>How it works</h3>
-<p>Every team starts from a baseline rating (carried over from a preseason prior). After each game the winner takes points from the loser: more for an upset, fewer for an expected win. The exchange is scaled by margin of victory and adjusted for home ice.</p>
+<p>Every team starts from the same baseline rating. After each game the winner takes points from the loser: more for an upset, fewer for an expected win. The exchange is scaled by margin of victory and adjusted for home ice.</p>
 <h3>Main attributes</h3>
 <ul class="plain"><li>Updates game by game</li><li>Uses margin of victory</li><li>Home-ice adjustment</li><li>Order of games matters</li></ul>
 <h3>References</h3>
@@ -91,6 +91,25 @@ fixed formulas (NPI, RPI). Some use goals scored, and others only wins and losse
 <h3>References</h3>
 <ul class="plain refs"><li><a href="https://en.wikipedia.org/wiki/Rating_percentage_index" rel="noopener" target="_blank">Wikipedia: Rating percentage index</a></li></ul>
 </div>
+
+
+<div class="card">
+<h2>Model settings</h2>
+<p>ELO, Massey and HockeyBT each have a few settings. They are not guessed: they were chosen with the same
+procedure for all three models, and every rating on this site comes from the current season's games alone.</p>
+<div class="table-wrap"><table class="conf">
+<thead><tr><th>Model</th><th>Setting</th><th>Men's</th><th>Women's</th><th>What it does</th></tr></thead>
+<tbody><tr><td>ELO</td><td>K factor</td><td>25</td><td>50</td><td class='desc'>How far a rating moves after each game. Higher reacts faster to recent results.</td></tr><tr><td>ELO</td><td>Home-ice points</td><td>50</td><td>50</td><td class='desc'>Rating points added to the home team&#x27;s rating when computing the expected result.</td></tr><tr><td>Massey</td><td>Margin cap</td><td>6</td><td>8</td><td class='desc'>The largest goal margin counted for any game; bigger margins count as this.</td></tr><tr><td>Massey</td><td>Ridge strength</td><td>2.0</td><td>0.5</td><td class='desc'>How strongly ratings are pulled toward the average, which steadies teams with few games.</td></tr><tr><td>Massey</td><td>Rest-days cap</td><td>5</td><td>5</td><td class='desc'>Days of rest beyond this count the same when adjusting for rest.</td></tr><tr><td>HockeyBT</td><td>Prior strength</td><td>0.5</td><td>0.2</td><td class='desc'>How strongly ratings are pulled toward the average, which steadies teams with few games.</td></tr></tbody></table></div>
+<h3>How they were chosen</h3>
+<p>For each model, many combinations of settings were tried. Each combination was refit every two weeks
+through each season from 2021-22 to 2025-26, using only games played before that date, and used to predict
+the next two weeks of games. Predictions were scored by log loss, which rewards confident correct
+predictions and penalizes confident wrong ones. Settings whose score could not be told apart from the best
+were treated as equivalent, and the one closest to the previous value was kept. The choice was then checked
+by choosing on some seasons and scoring on others. Men's and women's were tuned separately, so a few
+settings differ. NPI and RPI use the NCAA's published weights, and KRACH has no adjustable settings.</p>
+</div>
+
 
 <div class="card">
 <h2>Conference strength</h2>

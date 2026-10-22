@@ -139,5 +139,21 @@
     "KRACH": "Colgate",
     "HockeyBT": "Ohio State",
     "RPI": "Cornell"
+  },
+  "men:2026-10-22": {
+    "NPI": "Western Michigan",
+    "ELO": "Michigan",
+    "Massey": "Western Michigan",
+    "KRACH": "Western Michigan",
+    "HockeyBT": "Michigan",
+    "RPI": "Providence"
+  },
+  "women:2026-10-22": {
+    "NPI": "Cornell",
+    "ELO": "Wisconsin",
+    "Massey": "Wisconsin",
+    "KRACH": "Colgate",
+    "HockeyBT": "Ohio State",
+    "RPI": "Cornell"
   }
 }
