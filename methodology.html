@@ -19,8 +19,8 @@
 <main class="container">
 
 <h1>Methodology</h1>
-<p class="subtitle">Six ranking models, each fit from this season's game results and run for
-both divisions.</p>
+<p class="subtitle">Six ranking models, each fit from this season's game results (ELO also starts the
+season from a rating carried over from earlier ones) and run for both divisions.</p>
 
 <div class="card">
 <h2>How to read these rankings</h2>
@@ -35,9 +35,9 @@ fixed formulas (NPI, RPI). Some use goals scored, and others only wins and losse
 <div class="card-head"><h2>ELO</h2><div class="tag-row"><span class="tag men">Men's</span><span class="tag women">Women's</span></div></div>
 <p>A sequential rating that updates after every game, like chess ratings.</p>
 <h3>How it works</h3>
-<p>Every team starts from the same baseline rating. After each game the winner takes points from the loser: more for an upset, fewer for an expected win. The exchange is scaled by margin of victory and adjusted for home ice.</p>
+<p>Each season starts from a rating carried over from the previous two seasons (mostly last season's), pulled partway back toward the average; a team with no history starts near the low end of the field. After each game the winner takes points from the loser: more for an upset, fewer for an expected win. The exchange is scaled by margin of victory and adjusted for home ice.</p>
 <h3>Main attributes</h3>
-<ul class="plain"><li>Updates game by game</li><li>Uses margin of victory</li><li>Home-ice adjustment</li><li>Order of games matters</li></ul>
+<ul class="plain"><li>Updates game by game</li><li>Uses margin of victory</li><li>Home-ice adjustment</li><li>Starts each season from a carried-over rating</li><li>Order of games matters</li></ul>
 <h3>References</h3>
 <ul class="plain refs"><li>Elo, A. E. (1978). The Rating of Chessplayers, Past and Present. Arco.</li><li><a href="https://doi.org/10.1016/j.ijforecast.2009.10.002" rel="noopener" target="_blank">Hvattum, L. M. &amp; Arntzen, H. (2010). Using ELO ratings for match result prediction in association football. International Journal of Forecasting, 26(3), 460-470.</a></li><li><a href="https://en.wikipedia.org/wiki/Elo_rating_system" rel="noopener" target="_blank">Wikipedia: Elo rating system</a></li></ul>
 </div>
@@ -96,10 +96,12 @@ fixed formulas (NPI, RPI). Some use goals scored, and others only wins and losse
 <div class="card">
 <h2>Model settings</h2>
 <p>ELO, Massey and HockeyBT each have a few settings. They are not guessed: they were chosen with the same
-procedure for all three models, and every rating on this site comes from the current season's games alone.</p>
+procedure for all three models. Only ELO uses earlier seasons to start a season; every other rating on this
+site comes from the current season's games alone, and earlier seasons were used only to choose the
+settings.</p>
 <div class="table-wrap"><table class="conf">
 <thead><tr><th>Model</th><th>Setting</th><th>Men's</th><th>Women's</th><th>What it does</th></tr></thead>
-<tbody><tr><td>ELO</td><td>K factor</td><td>25</td><td>50</td><td class='desc'>How far a rating moves after each game. Higher reacts faster to recent results.</td></tr><tr><td>ELO</td><td>Home-ice points</td><td>50</td><td>50</td><td class='desc'>Rating points added to the home team&#x27;s rating when computing the expected result.</td></tr><tr><td>Massey</td><td>Margin cap</td><td>6</td><td>8</td><td class='desc'>The largest goal margin counted for any game; bigger margins count as this.</td></tr><tr><td>Massey</td><td>Ridge strength</td><td>2.0</td><td>0.5</td><td class='desc'>How strongly ratings are pulled toward the average, which steadies teams with few games.</td></tr><tr><td>Massey</td><td>Rest-days cap</td><td>5</td><td>5</td><td class='desc'>Days of rest beyond this count the same when adjusting for rest.</td></tr><tr><td>HockeyBT</td><td>Prior strength</td><td>0.5</td><td>0.2</td><td class='desc'>How strongly ratings are pulled toward the average, which steadies teams with few games.</td></tr></tbody></table></div>
+<tbody><tr><td>ELO</td><td>K factor</td><td>20</td><td>50</td><td class='desc'>How far a rating moves after each game. Higher reacts faster to recent results.</td></tr><tr><td>ELO</td><td>Home-ice points</td><td>50</td><td>50</td><td class='desc'>Rating points added to the home team&#x27;s rating when computing the expected result.</td></tr><tr><td>ELO</td><td>Carryover kept</td><td>0.8</td><td>0.8</td><td class='desc'>Share of the rating carried over from earlier seasons that is kept as the starting rating. The rest starts at the average.</td></tr><tr><td>ELO</td><td>Last-season weight</td><td>0.6</td><td>0.6</td><td class='desc'>How much last season&#x27;s final rating counts in the carried-over rating.</td></tr><tr><td>ELO</td><td>Two-seasons-ago weight</td><td>0.15</td><td>0.15</td><td class='desc'>How much the final rating from two seasons back counts in the carried-over rating.</td></tr><tr><td>Massey</td><td>Margin cap</td><td>6</td><td>8</td><td class='desc'>The largest goal margin counted for any game; bigger margins count as this.</td></tr><tr><td>Massey</td><td>Ridge strength</td><td>2.0</td><td>0.5</td><td class='desc'>How strongly ratings are pulled toward the average, which steadies teams with few games.</td></tr><tr><td>Massey</td><td>Rest-days cap</td><td>5</td><td>5</td><td class='desc'>Days of rest beyond this count the same when adjusting for rest.</td></tr><tr><td>HockeyBT</td><td>Prior strength</td><td>0.5</td><td>0.2</td><td class='desc'>How strongly ratings are pulled toward the average, which steadies teams with few games.</td></tr></tbody></table></div>
 <h3>How they were chosen</h3>
 <p>For each model, many combinations of settings were tried. Each combination was refit every two weeks
 through each season from 2021-22 to 2025-26, using only games played before that date, and used to predict
