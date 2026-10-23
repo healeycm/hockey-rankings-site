@@ -57,12 +57,12 @@ h3 { font-size: 1rem; font-weight: 700; margin: 16px 0 4px; }
 
 .banner { border-left: 3px solid var(--border); padding: 4px 12px; margin: 0 0 16px; color: var(--muted); }
 
-.tabs { display: flex; gap: 12px 32px; flex-wrap: wrap; margin: 0 0 8px; }
-.tab-group-label { color: var(--muted); font-size: .8rem; margin-bottom: 2px; }
-.tab-group-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-.tab-note { color: var(--muted); font-size: .85rem; margin: 0 0 12px; max-width: 46rem; }
+.tabs { display: flex; gap: 20px 48px; flex-wrap: wrap; margin: 20px 0 8px; }
+.tab-group-label { color: var(--muted); font-size: .78rem; margin-bottom: 6px; }
+.tab-group-btns { display: flex; gap: 6px 22px; flex-wrap: wrap; }
+.tab-note { font-size: .82rem; margin: 6px 0 18px; }
 .tab-btn {
-  border: none; background: none; padding: 2px 0; font: inherit; cursor: pointer;
+  border: none; background: none; padding: 8px 0 6px; font: inherit; cursor: pointer;
   color: var(--accent); border-bottom: 2px solid transparent;
 }
 .tab-btn:hover { text-decoration: underline; }
@@ -70,7 +70,7 @@ h3 { font-size: 1rem; font-weight: 700; margin: 16px 0 4px; }
 
 .table-wrap { overflow-x: auto; }
 table { width: 100%; min-width: 480px; border-collapse: collapse; }
-th, td { padding: 6px 10px 6px 0; text-align: left; border-bottom: 1px solid var(--border); font-size: .92rem; }
+th, td { padding: 9px 10px 9px 0; text-align: left; border-bottom: 1px solid var(--border); font-size: .92rem; }
 thead th { font-weight: 700; border-bottom: 2px solid var(--rule); }
 tbody tr:hover td { background: var(--hover); }
 
@@ -96,7 +96,12 @@ tbody tr:hover td { background: var(--hover); }
 @media (max-width: 600px) {
   .site-header nav a { margin: 0 14px 0 0; }
   table { min-width: 0; }
-  th, td { padding-right: 6px; font-size: .88rem; }
+  th, td { padding: 8px 6px 8px 0; font-size: .88rem; }
+  .tabs { gap: 14px; }
+  .tab-group { width: 100%; }
+  .tab-group-btns { gap: 4px 20px; }
+  .tab-btn { padding: 10px 0 8px; }
+  h1 { font-size: 1.3rem; }
   .num { padding-right: 8px; }
   table.rankings th:nth-child(3), table.rankings td:nth-child(3) { display: none; }
   .team-link { gap: 6px; }
