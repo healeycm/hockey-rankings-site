@@ -57,7 +57,10 @@ h3 { font-size: 1rem; font-weight: 700; margin: 16px 0 4px; }
 
 .banner { border-left: 3px solid var(--border); padding: 4px 12px; margin: 0 0 16px; color: var(--muted); }
 
-.tabs { display: flex; gap: 16px; flex-wrap: wrap; margin: 0 0 12px; }
+.tabs { display: flex; gap: 12px 32px; flex-wrap: wrap; margin: 0 0 8px; }
+.tab-group-label { color: var(--muted); font-size: .8rem; margin-bottom: 2px; }
+.tab-group-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+.tab-note { color: var(--muted); font-size: .85rem; margin: 0 0 12px; max-width: 46rem; }
 .tab-btn {
   border: none; background: none; padding: 2px 0; font: inherit; cursor: pointer;
   color: var(--accent); border-bottom: 2px solid transparent;
@@ -79,6 +82,8 @@ tbody tr:hover td { background: var(--hover); }
 /* "Cards" are just sections: a rule above, no box. */
 .card { border-top: 1px solid var(--border); padding: 4px 0 8px; margin-top: 20px; }
 .card h2:first-child { margin-top: 12px; }
+.group-head { margin-top: 32px; }
+.model-name { font-size: 1.15rem; margin: 24px 0 8px; }
 .card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
 .tag-row { display: flex; gap: 10px; }
 .tag { font-size: .8rem; color: var(--muted); }
