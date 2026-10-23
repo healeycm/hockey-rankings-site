@@ -135,7 +135,7 @@ table.matrix tbody th { text-align: left; font-weight: 600; border-bottom: 1px s
   color: var(--muted); }
 .cal-opp { display: flex; align-items: center; gap: 5px; margin-top: 4px; }
 .cal-opp .logo { width: 18px; height: 18px; flex: none; }
-.cal-opp span { overflow-wrap: anywhere; }
+.cal-opp span { min-width: 0; overflow-wrap: anywhere; }
 .cal-prob { margin-top: auto; padding-top: 4px; font-size: 1.15rem; font-weight: 700; font-variant-numeric: tabular-nums; }
 .cal-legend { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: .78rem; color: var(--muted); margin: 4px 0 0; }
 .cal-scale { width: 120px; height: 10px; background: linear-gradient(90deg, color-mix(in srgb, var(--dog) 52%, var(--bg)),
@@ -144,13 +144,18 @@ table.matrix tbody th { text-align: left; font-weight: 600; border-bottom: 1px s
 @media (max-width: 600px) {
   .cal { display: block; border: 0; }
   .cal-dow, .cal-day:not(.game) { display: none; }
-  .cal-day.game { display: grid; grid-template-columns: 5.4rem 1fr auto; align-items: center; gap: 0 8px; min-height: 0;
+  .cal-day.game { display: grid; grid-template-columns: 7rem 1fr auto; align-items: center; gap: 0 8px; min-height: 0;
     margin-bottom: 4px; padding: 9px 10px; font-size: .9rem; border: 0; }
   .cal-num { display: none; }
   .cal-full { display: block; color: var(--text); }
   .cal-day.game .cal-ha { position: static; order: 4; display: none; }
-  .cal-opp { margin: 0; }
+  .cal-opp { margin: 0; min-width: 0; }
+  .cal-opp span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; overflow-wrap: normal; }
+  .cal-full, .cal-prob { white-space: nowrap; }
   .cal-prob { margin: 0; padding: 0; font-size: 1rem; }
+  .cal-legend { flex-wrap: nowrap; white-space: nowrap; font-size: .72rem; gap: 6px; }
+  .cal-scale { width: 64px; }
+  .cal-key { margin-left: 6px; }
 }
 
 ul.plain { list-style: none; padding: 0; margin: 0; }
