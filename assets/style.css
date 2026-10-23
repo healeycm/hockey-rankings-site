@@ -167,7 +167,13 @@ table.matrix tbody th { font-weight: 600; color: var(--ink); text-transform: non
   .tab-btn { padding: 9px 0 7px; }
   th, td { padding-right: 6px; }
   td.c, th.c { display: none; }
-  td.mv { width: 36px; }
+  td.mv { width: 34px; }
+  table.rankings td, table.rankings th { white-space: nowrap; }
+  table.rankings td.num, table.rankings th.num { font-size: 13px; padding-right: 6px; }
+  table.rankings td.rk { width: 28px; }
+  table.rankings td:nth-child(3) { max-width: 0; width: 100%; }          /* the team column takes the slack... */
+  table.rankings .team-link { overflow: hidden; }                       /* ...and a long name is cut, not wrapped */
+  table.rankings .team-link .name { overflow: hidden; text-overflow: ellipsis; }
   .sched li { grid-template-columns: 6.6rem minmax(0, 1fr) 3.8rem; gap: 8px; }
   .site-footer, .footer { padding: 16px; }
 }
