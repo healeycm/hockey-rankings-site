@@ -267,5 +267,21 @@
     "HockeyBT": "Ohio State",
     "ELO": "Ohio State",
     "Dynamic": "Ohio State"
+  },
+  "men:2026-11-07": {
+    "NPI": "Michigan",
+    "KRACH": "Dartmouth",
+    "Massey": "Western Michigan",
+    "HockeyBT": "Michigan",
+    "ELO": "Western Michigan",
+    "Dynamic": "Michigan"
+  },
+  "women:2026-11-07": {
+    "NPI": "Ohio State",
+    "KRACH": "Ohio State",
+    "Massey": "Wisconsin",
+    "HockeyBT": "Ohio State",
+    "ELO": "Ohio State",
+    "Dynamic": "Ohio State"
   }
 }
